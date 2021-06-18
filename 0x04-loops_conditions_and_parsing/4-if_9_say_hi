@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #will print Holberton School until n is 9 to print Hi
 
-n=0
+n=1
 while (( n <= 10 ))
 do
 	echo "Holberton School"
 	if [ $n = 9 ];
 	then
-		echo "Hi"
+	    echo "Hi"
 	fi
 	(( n++ ));
 done
