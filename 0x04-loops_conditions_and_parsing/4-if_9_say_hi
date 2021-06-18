@@ -5,7 +5,7 @@ n=0
 while (( n <= 10 ))
 do
 	echo "Holberton School"
-	if [ $n = 9 ]
+	if [ $n = 9 ];
 	then
 		echo "Hi"
 	fi
