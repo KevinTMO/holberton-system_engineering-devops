@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#will print each hour with the seconds after the hour
+#until 12 hours
+
+h=0
+while (( h <= 12 ))
+do
+    echo "Hour: $h"
+    (( h++ ))
+    s=1
+    while (( s <= 59 ))
+    do
+	echo $s
+	(( s++ ));
+    done
+done
