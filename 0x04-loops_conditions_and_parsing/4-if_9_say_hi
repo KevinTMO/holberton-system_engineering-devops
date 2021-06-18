@@ -9,6 +9,6 @@ do
 	if [ $n = 9 ]
 	then
 		echo "Hi"
-		fi
+	fi
 	(( n++ ));
 done
