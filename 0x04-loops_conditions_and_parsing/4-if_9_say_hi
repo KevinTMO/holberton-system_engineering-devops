@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #will print Holberton School until n is 9 to print Hi
-#then continue printin Holberton School until n eq 10
 
 n=0
 while (( n <= 10 ))
