@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#
+#will print the list of files in the current directory
+#and cut the first part before the delim "-"
 
 file=$(ls)
 for _ in $file
