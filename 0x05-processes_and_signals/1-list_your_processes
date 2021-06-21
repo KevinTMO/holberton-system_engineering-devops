@@ -10,4 +10,4 @@
 #x: will instruct ps to list the processes without a controlling terminal.
 #Those are mainly processes that are started on boot time and running in the
 #background.
-ps aux
+ps -auxf
