@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#ps aux will display information in eleven columns labeled:
+#USER, PID, %CPU, %MEM, VSZ, RSS, STAT, START, TTY, TIME and CMD
+#The options used are:
+#a: tell ps to display the processes of all users. Only the processes
+#that not associated with a terminal and processes of group leader are not
+#shown.
+#u: stands for a user-oriented format that provides detailed information about
+#the processes.
+#x: will instruct ps to list the processes without a controlling terminal.
+#Those are mainly processes that are started on boot time and running in the
+#background.
+ps aux
