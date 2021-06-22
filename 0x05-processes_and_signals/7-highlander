@@ -2,7 +2,7 @@
 #will trap the signal to kill the process and instead, display
 #the error message
 
-trap 'echo "I am invicible!!!"' SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
