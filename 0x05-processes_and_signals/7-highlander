@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#will trap the signal to kill the process and instead, display
+#the error message
+
+trap 'echo "I am invicible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
