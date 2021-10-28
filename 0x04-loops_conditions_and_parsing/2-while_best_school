@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Looping 10 times a string to stdout
+# String "Best School"
+# @n: a variable with a constant 1
+# @le: less or equal to whatever the value is on the right
+
+number=1
+
+while [ $number -le 10 ]
+do
+	echo "Best School";
+	(( number++ ))
+done
