@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#it will print Holberton School until n is equal to 10
-
-n=0
-until (( n == 10 ))
-do
-    echo "Holberton School";
-    (( n++ ))
-done
