@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# will print 1 to 100 and replace according if:
+# n % 3 to Fizz
+# n % 5 to Buzz
+# n % 15 to FizzBuzz
+# else will print the number
+
+number=1
+while (( number <= 100 ));
+do
+    if (( number % 15 == 0));
+    then
+        echo "FizzBuzz";
+    elif (( number % 3 == 0 ));
+    then
+        echo "Fizz";
+    elif (( number % 5 == 0 ));
+    then
+        echo "Buzz";
+    else
+        echo "$number";
+    fi
+    (( number++ ));
+done
