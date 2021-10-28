@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# will test if the file and print a message
+# depending on what is testing
+# -a is an option that checks if a File exists then is True
+# -f is an option that checks if a File exists and if it's a regular File
+# -s is an option that checks if a File exists and its size is > than 0
+# Las else will just assume the File doesnt exist
+
+file="school"
+if [ -a "$file" ];
+then
+    echo "$file file exists"
+
+    if [ -f "$file" ];
+    then
+        echo "$file is a regular file"
+    fi
+
+    if [ -s "$file" ];
+    then
+        echo "$file file is not empty"
+    else
+        echo "$file file is empty"
+    fi
+else
+    echo "$file file does not exist"
+fi
