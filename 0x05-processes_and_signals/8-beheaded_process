@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#killing a process that is using SIGTERM
-#with another signal called SIGKILL
-
-kill -9 "$(pgrep -f "./7-highlander")"

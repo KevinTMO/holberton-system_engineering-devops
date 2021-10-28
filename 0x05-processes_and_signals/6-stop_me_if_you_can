@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#terminating a process by name using -f option
-
-pkill -f infinity
