@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# print Best School to stdout until var value is equal to 10
+
+number=1
+
+until (( number == 10 ))
+do
+	echo "Best School";
+	(( number++ ))
+done
