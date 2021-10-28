@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# print numbers until 20 until:
+# 4th, 9th and 17 th line where you should print
+# a particular string
+# esac: will evaluate serverals statements, if it doesnt use any of them
+# will just use the default condition
+# case: it works like switch/case in c
+
+number=1
+
+while (( number <= 20 ))
+do
+	echo $number
+	case $number in
+		4) echo "bad luck from China";;
+		9) echo "bad luck from Japan";;
+		17) echo "bad luck from Italy";;
+		esac
+	(( number++ ));
+done
