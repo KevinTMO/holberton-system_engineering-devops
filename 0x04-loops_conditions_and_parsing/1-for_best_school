@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This bash should print 10 times a string using echo as command
+# @i: is a variable to iterate 10 times from 1 to 10
+# @{1..10}: is the range you want to iterate
+# @echo: the command to print to stdout a string
+
+for i in {1..10}
+do
+	echo "Best School"
+done
