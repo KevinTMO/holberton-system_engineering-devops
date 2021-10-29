@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#get your own PID process
+echo $$

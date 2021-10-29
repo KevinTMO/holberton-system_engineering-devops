@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#will trap the signal to kill the process and instead, display
+#the error message
+
+#func()
+#{
+#    echo "I am invincible!!!"
+#}
+
+#trap "func" SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
