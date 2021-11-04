@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# netstat command -l [listening sockets] -p [lst process name for opened socket]
+
+sudo netstat -lp
