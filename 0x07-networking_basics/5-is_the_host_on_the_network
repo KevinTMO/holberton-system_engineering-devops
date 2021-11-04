@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Check if there's arguments by using $#, if not, echo string
+# If there's argument then execute command ping with first argument and opt -c
+# To explain better: ping is a command ; $1 is looking for a number (ping addrs)
+# And option -c is just going to count to the amount you put after it
+# Syntax will look like: [command]/[IP]/[opt][value]
+
+if [ $# -eq 0 ];
+then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+    ping $1 -c 5
+fi
