@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# ifconfig will show your IP address with all the info contained
+# grep will get the string that you give. In this case "inet addr"
+# cut will do that but giving two options we can control what we get:
+# -d will delimit by a character (it means it will stop there)
+# -f will give you whatever it contains in that field (column) but in this case:
+# giving -f a number we can control what we get after finding delimiter
+# starting from 1 (left start) to whatever the max column in.
+# We give field 2 after finding the first delimit to get what is after string
+# and we give after field 1 to get what is before the next delimit
+
+ifconfig | grep "inet addr" | cut -d ":" -f 2 | cut -d " " -f 1
