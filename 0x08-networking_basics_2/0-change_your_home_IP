@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Change home IP to another then rollback
 
-cp ~/etc/hosts ~/hosts_new
+cp /etc/hosts ~/hosts_new
 sed -i 's/127.*$/127.0.0.2 tlocalhost\n8.8.8.8 tfacebook.com/' ~/hosts_new
-cp -f ~/hosts_new ~/etc/hosts
+cp -f ~/hosts_new /etc/hosts
