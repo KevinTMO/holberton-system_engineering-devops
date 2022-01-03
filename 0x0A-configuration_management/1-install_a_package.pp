@@ -3,6 +3,6 @@
 $style = 'puppet-lint'
 
 package { $style:
-  ensure   => '2.5.2',
+  ensure   => '2.5.0',
   provider => 'gem'
 }
