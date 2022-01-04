@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script to create a RSA key pair - priv/pub
+# -t: type of key
+# -b: bits to generate RSA Default is 3072
+# -f: filename for the key to generate
+# -N: provide the Passphare for that
+
+ssh-keygen -t rsa -b 4096 -f school -N betty
