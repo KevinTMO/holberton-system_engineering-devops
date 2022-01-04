@@ -1,4 +1,5 @@
 # Adding lines to ssh_config using puppet
+include stdlib
 
 file_line { 'rule_1':
   ensure => 'present',
