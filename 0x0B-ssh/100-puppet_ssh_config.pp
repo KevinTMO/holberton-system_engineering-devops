@@ -9,5 +9,5 @@ file_line { 'sudo_rule_1':
 file_line { 'sudo_rule_2':
   ensure => 'present',
   path => '/etc/ssh/ssh_config',
-  line => 'IdentifyFile ~/.ssh/school'
+  line => 'IdentityFile ~/.ssh/school'
 }
