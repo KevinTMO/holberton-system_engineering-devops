@@ -4,7 +4,7 @@ include stdlib
 file_line { 'rule_1':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
-  line   => 'BatchMode yes'
+  line   => 'PasswordAuthentication no'
 }
 
 file_line { 'rule_2':
