@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Requesting by port a webpage info using curl && starting apache2 in container
+
+sudo service apache2 start
