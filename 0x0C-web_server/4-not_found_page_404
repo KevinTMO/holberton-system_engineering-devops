@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 # Installing nginx
 
-apt-get update -y
-apt-get install nginx -y
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo apt-get update -y
+sudo apt-get install nginx -y
+# | Sending string to index html page
+sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+# | Adding a permanent redirection
 string='rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
-sed -i "42i\\\t$string" /etc/nginx/sites-available/default
+sudo sed -i "42i \\\t$string" /etc/nginx/sites-available/default
+# | 404 error page
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 err404="\\\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
 sudo sed -i "50i $err404" /etc/nginx/sites-available/default
-service nginx restart
+sudo service nginx restart
