@@ -8,6 +8,8 @@ sudo apt-get install haproxy -y
 # | Changing ENABLED value to 1 to be started by init script
 enbl="\\\n#Enable value 1 to be started by init script\nENABLED=1\n"
 sudo sed -i "11i $enbl" /etc/default/haproxy
+# | Creating a backup file of the original haproxy configuration file
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_backup.cfg
 # | Variables for servers hostnames
 web01="2361-web-01"
 web02="2361-web-02"
