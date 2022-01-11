@@ -2,8 +2,8 @@
 # Installing && configuring haproxy for redundancy of two servers
 
 # | Updating and installing haproxy
-# sudo apt-get update -y
-# sudo apt-get install haproxy -y
+sudo apt-get update -y
+sudo apt-get install haproxy -y
 # | Changing ENABLED value to 1 to be started by init script
 enbl="\\\n#Enable value 1 to be started by init script\nENABLED=1\n"
 sudo sed -i "11i $enbl" /etc/default/haproxy
