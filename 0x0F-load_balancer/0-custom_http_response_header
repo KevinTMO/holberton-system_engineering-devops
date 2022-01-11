@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Creating a custom header for nginx server
+
+cstm='add_header X-Served-By "$hostname";'
+sudo sed -i "43i \\\t$cstm" /etc/nginx/sites-available/default
+sudo service nginx restart
