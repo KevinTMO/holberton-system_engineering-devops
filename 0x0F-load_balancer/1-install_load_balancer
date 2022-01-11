@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
-# Install and configure HAproxy
+# Installing && configuring haproxy for redundancy of two servers
 
-sudo apt-get update
+# | Updating and installing haproxy
+sudo apt-get update -y
+sudo apt-get nginx -y
 sudo apt-get install haproxy -y
-
-string="\\\n# Enable HAproxy to be started by the init script\nENABLED=1\n"
-
-sed -i "8i $string" /etc/default/haproxy
-
-front="\\\nfrontend haproxynode\n\tbind\t*:80\nmode\thttp\ndefault_backend\tbackendnodes\n\n"
-back="backend backendnodes\n\tbalance\troundrobin\nserver\t2832-web-01 35.231.117.82:80 check\n\tserver\t2832-web-02 35.229.57.82:80 check"
-
-sed -i "35i $front $back" /etc/haproxy/haproxy.cfg
-
+# | Changing ENABLED value to 1 to be started by init script
+enbl="\\\n#Enable value 1 to be started by init script\nENABLED=1\n"
+sudo sed -i "11i $enbl" /etc/default/haproxy
+# | Variables for servers hostnames
+web01="2361-web-01"
+web02="2361-web-02"
+# | Frontend and Backend configurations lines
+frontend="frontend haproxynode\n\tbind *:80\n\tmode http\n\tdefault_backend backendnodes\n"
+backend="backend backendnodes\n\tbalance roundrobin\n\tserver $web01 34.139.234.80:80 check\n\tserver $web02 104.196.35.48:80 check"
+# | Insert lines in haproxy.cfg
+sudo sed -i "36i $frontend$backend" /etc/haproxy/haproxy.cfg
+# | Restart haproxy service
 sudo service haproxy restart
