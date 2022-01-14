@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Displays DNS records: IP, record type && subdomains
 
-subPrint () {
+subPrint ()
+{
     printf "The subdomain %s is a " "$2"
-    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F' ' '{ printf $4 }'
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $4 }'
     printf " record and points to "
-    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F' ' '{ printf $5 }'
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $5 }'
     printf "\n"
 }
 
