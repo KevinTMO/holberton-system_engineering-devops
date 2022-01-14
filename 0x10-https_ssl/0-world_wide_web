@@ -9,11 +9,12 @@ subPrint () {
     printf "\n"
 }
 
-subs=("www" "lb-01" "web-01" "web-02")
+# subs=("www" "lb-01" "web-01" "web-02")
 
 if [ -z "$2" ];
 then
-   for subDom in "${subs[@]}";
+    # for subDom in "${subs[@]}";
+   for subDom in "www" "lb-01" "web-01" "web-02"
    do
        subPrint "$1" "$subDom"
    done
