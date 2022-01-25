@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Passing a user argument to sudo and then whoami
+
+sudo -u "$1" whoami
