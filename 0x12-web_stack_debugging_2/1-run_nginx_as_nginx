@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Killing apache2 process since it's listening to port 8080
+# Adding privileges to nginx.conf
+# Changing port to 8080 on nginx/sites-available
+# Restarting service of nginx using nginx usr
+
+sudo pkill apache2
+sudo chmod 644 /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+sudo -u nginx service nginx restart
