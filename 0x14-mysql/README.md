@@ -1,5 +1,6 @@
 # Learning Objectives
 ## General
+
 - What is the main role of a database
 - What is a database replica
 - What is the purpose of a database replica
@@ -8,6 +9,7 @@
 
 # Requirements
 ## General
+
 - Allowed editors: vi, vim, emacs
 - All your files will be interpreted on Ubuntu 16.04 LTS
 - All your files should end with a new line
