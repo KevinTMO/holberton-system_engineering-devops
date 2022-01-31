@@ -20,13 +20,13 @@ if __name__ == "__main__":
 
     empId = argv[1]
 
-    rqDt = get('https://jsonplaceholder.typicode.com/users/'
-               + empId)
+    rqDt = get('https://jsonplaceholder.typicode.com/users/' +
+               empId)
 
     empName = rqDt.json()['username']
 
-    rqUsrDt = get('https://jsonplaceholder.typicode.com/todos?userId='
-                  + empId)
+    rqUsrDt = get('https://jsonplaceholder.typicode.com/todos?userId=' +
+                  empId)
 
     rqUsrDt = rqUsrDt.json()
 
