@@ -34,8 +34,8 @@ if __name__ == "__main__":
         for dt in rqUsrDt:
             csvFile.write(
                 '"{}","{}","{}","{}"\n'.format(empId, empName,
-                                                  dt['completed'],
-                                                  dt['title']))
+                                               dt['completed'],
+                                               dt['title']))
 
 #    print("-------------  Below is testing code  --------------")
 
