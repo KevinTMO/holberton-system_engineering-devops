@@ -26,7 +26,7 @@ def number_of_subscribers(subreddit):
         'user-agent': 'myUsr'
     }
 
-    response = get(url, allow_redirects=False, headers=headers)
+    response = get(url, headers=headers)
 
     # print(response.json()) -> for debuggin purposes
 
