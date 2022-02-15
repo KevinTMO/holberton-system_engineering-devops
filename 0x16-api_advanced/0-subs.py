@@ -14,6 +14,7 @@ from requests import get
 
 reddit = 'https://www.reddit.com/r/'
 
+
 def number_of_subscribers(subreddit):
     """
     Return the numbers of subscribers of a given subreddit
