@@ -48,7 +48,7 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
 
         for dt in responseData.get('children'):
             hot_list.append(dt.get('data').get('title'))
-            # print(hot_list)
+            # print(hot_list) -> for debugging purporses
 
         if after is not None:
             return recurse(subreddit, hot_list, after, count)
