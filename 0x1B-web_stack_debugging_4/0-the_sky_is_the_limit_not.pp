@@ -5,6 +5,8 @@ exec { 'IncrementingVal':
   path    => '/bin'
 }
 
+# restarting nginx web-server
+
 exec { 'restartNginx':
   command => '/usr/sbin/service nginx restart'
 }
